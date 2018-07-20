@@ -28,7 +28,7 @@ pipeline {
   
   
 			log.info "Completed"
-			echo ${env.lastmessage}        
+			echo "${env.lastmessage}"        
 		    }    
             }
         }
