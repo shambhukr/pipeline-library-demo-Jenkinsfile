@@ -1,15 +1,26 @@
 @Library('pipeline-library-demo')_
 
-stage('Demo') {
+pipeline {
+    agent {
+	 label 'master'
+		}
+    stages {
+        stage('Demo') {
+            steps {
+                
+ 			log.info "Starting"
 
- log.info "Starting"
-
-  echo 'Hello World'
   
-   log.warning "Saying hello to Dave"
-
-  sayHello 'Dave'
+			echo 'Hello World'
   
-  log.info "Completed"
+   
+			log.warning "Saying hello to Dave"
 
+  
+			sayHello 'Dave'
+  
+  
+			log.info "Completed"
+            }
+        }
 }
