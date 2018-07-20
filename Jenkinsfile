@@ -4,9 +4,16 @@ pipeline {
     agent {
 	 label 'master'
 		}
+	
+	environment{
+		lastmessage = log.returnStr "finally"	
+		
+	}
     stages {
         stage('Demo') {
             steps {
+		    echo env.lastmessage
+		    
 		    script{
  			log.info "Starting"
 
@@ -21,6 +28,7 @@ pipeline {
   
   
 			log.info "Completed"
+			echo ${env.lastmessage}        
 		    }    
             }
         }
