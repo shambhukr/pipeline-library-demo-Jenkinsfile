@@ -23,4 +23,5 @@ pipeline {
 			log.info "Completed"
             }
         }
+	}
 }
