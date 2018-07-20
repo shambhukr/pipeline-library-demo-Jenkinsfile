@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Demo') {
             steps {
-                
+		    script{
  			log.info "Starting"
 
   
@@ -21,6 +21,7 @@ pipeline {
   
   
 			log.info "Completed"
+		    }    
             }
         }
 	}
